@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --brown: rgb(128, 78, 37);
+    --darkbrown: rgb(48, 30, 27);
+    --mainBackground: rgb(235, 230, 224);
+    --green: rgb(193, 206, 185);
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 20px;
+}
+
+hr {
+    border: none;
+    border-top: var(--brown) solid 2px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 24px;
+}
+

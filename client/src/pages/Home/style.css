@@ -1,0 +1,88 @@
+body {
+    background-image: url("https://www.nps.gov/piro/learn/nature/images/DeepForest_1.JPG");
+    background-size: 100%;
+}
+
+#content {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(41,36,32, .75);
+}
+
+main {
+    padding: 40px 25px;
+    border-radius: 15px;
+    color: var(--brown);
+    min-height: 100%;
+}
+
+main, header, footer {
+    margin: 15px auto;
+    width: 80%;
+    background: var(--mainBackground);
+}
+
+hr {
+    border-color: var(--mainBackground);
+    opacity: .5;
+    width: 70%;
+    margin: 15px auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    text-align:center;    
+    align-items:center;
+    height: 80px;
+    padding: 15px;
+    background: inherit;
+    background: var(--mainBackground);
+}
+
+header h1, header p {
+    padding: 5px 10px;
+    color: var(--brown);
+    display: inline-block;
+}
+
+header h1 {
+    border-right: var(--darkbrown) solid 1px;
+    margin-right: 5px;
+}
+
+nav {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background: var(--brown);
+    border-top: var(--darkbrown) solid 2px;
+
+    width: 80%;
+    margin: 0 auto;
+    color: var(--mainBackground);
+}
+
+.tab {
+    text-align:center;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 20%;
+    color: var(--mainBackground);
+}
+
+.tab:not(#contact) {
+    border-right: var(--mainBackground) dotted 1px;
+}
+
+footer {
+    color: var(--mainBackground);
+    background: none;
+    padding: 15px;
+    text-align:center;
+}
