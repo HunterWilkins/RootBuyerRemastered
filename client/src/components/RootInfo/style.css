@@ -1,0 +1,38 @@
+#rootinfo article, #rootinfo aside {
+    width: 45%;
+    display: inline-block;
+    vertical-align:top;
+}
+
+#rootinfo article {
+    margin-right: 2.5%;
+    padding-right: 2.5%;
+    border-right: var(--brown) 4px solid;
+}
+
+#rootinfo article h1, #rootinfo article h3 {
+    line-height: 1.5em;
+}
+
+#rootinfo article p, #rootinfo aside p {
+    display: block;
+    line-height: 1.25em;
+    white-space: pre-line;
+}
+
+#rootinfo aside .center-x {
+    margin: 0 auto;
+}
+
+#rootinfo figure {
+    text-align:center;
+    display: block;
+    margin: 0 auto;
+    height: 300px;
+    width: 100%;
+}
+
+#rootinfo figure img {
+    width: initial;
+    height: inherit;
+}

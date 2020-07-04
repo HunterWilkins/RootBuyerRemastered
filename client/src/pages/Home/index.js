@@ -1,14 +1,22 @@
 import React, {Component} from "react";
 import "./style.css";
-import {Link} from "react-router-dom"; 
+import {Link, Route} from "react-router-dom"; 
 import About from "../../components/About/index.js";
 import Harvesting from "../../components/Harvesting/index.js";
-
+import Selling from "../../components/Selling/index.js";
+import Contact from "../../components/Contact/index.js";
+import RootInfo from "../../components/RootInfo/index.js";
+import axios from "axios";
 
 class Home extends Component {
 
     state = {
         page: window.location.pathname.split("/")[1]
+    }
+
+    rootInfo = {
+        name: "",
+        desc: ""
     }
 
     componentDidMount = () => {
@@ -21,7 +29,7 @@ class Home extends Component {
     }
 
     render() {
-        let pages = ["Home", "Selling", "Harvesting", "Buying", "Contact"];
+        let pages = ["Home", "Selling", "Harvesting", "Contact"];
         
         let currentPage;
 
@@ -33,16 +41,16 @@ class Home extends Component {
                 currentPage = <About />;
                 break;
             case "selling":
-                currentPage = <About />;
+                currentPage = <Selling routeFunction = {this.route}/>;
                 break;
             case "harvesting":
                 currentPage = <Harvesting />;
                 break;
-            case "buying":
-                currentPage = <About />;
-                break;
             case "contact":
-                currentPage = <About />;
+                currentPage = <Contact />;
+                break;
+            case "rootinformation":
+                currentPage = <RootInfo rootInfo = {this.rootInfo}/>
                 break;
         }
 

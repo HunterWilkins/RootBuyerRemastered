@@ -19,6 +19,11 @@ hr {
     border-top: var(--brown) solid 2px;
 }
 
+.brown-hr {
+    border-top: var(--brown) solid 2px;
+    width: 90%;
+}
+
 h1 {
     font-size: 30px;
 }
@@ -29,5 +34,13 @@ h2 {
 
 h3 {
     font-size: 24px;
+}
+
+.half-opacity {
+    opacity: .75;
+}
+
+.center-x {
+    text-align:center;
 }
 

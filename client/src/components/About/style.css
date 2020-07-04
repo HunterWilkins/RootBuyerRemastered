@@ -1,0 +1,12 @@
+#about figure {
+    text-align:center;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+    border: var(--brown) solid 4px;
+}

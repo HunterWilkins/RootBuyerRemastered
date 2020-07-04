@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+var path = require("path");
 
 function About(props) {
     return(
@@ -16,10 +17,15 @@ function About(props) {
                 For over 45 years we have been buying herbs and roots from diggers and cultivators. To help you with questions about cultivating, finding, and harvesting herbs and roots, we have included many categories of interesting facts.                
             </p>
             <br></br>
-            <p>Ginseng is our most popular product! </p>
+            <figure>
+                <img src = "/Ginseng.jpg" alt = "Ginseng"/>
+                <p>Ginseng is our most popular product!</p>
+                <p className = "half-opacity">(Image courtesy of Gary Kauffman)</p>
+
+            </figure>
             <br></br>
             <p>
-                Please be responsible: All roots, herbs, leaves and barks must be legally obtained. Please check your states laws prior to removing any plant or plant part from its native territory.
+                Please be responsible: All roots, herbs, leaves and barks must be legally obtained. Please check your state's laws prior to removing any plant or plant part from its native territory.
             </p>
 
             <p>
