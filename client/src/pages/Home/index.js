@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import "./style.css";
 import {Link, Route} from "react-router-dom"; 
 import About from "../../components/About/index.js";
-import Harvesting from "../../components/Harvesting/index.js";
-import Selling from "../../components/Selling/index.js";
+import FAQ from "../../components/FAQ/index.js";
+import Plants from "../../components/Plants/index.js";
 import Contact from "../../components/Contact/index.js";
 import RootInfo from "../../components/RootInfo/index.js";
 import axios from "axios";
@@ -11,7 +11,8 @@ import axios from "axios";
 class Home extends Component {
 
     state = {
-        page: window.location.pathname.split("/")[1]
+        page: window.location.pathname.split("/")[1],
+        roots: []
     }
 
     rootInfo = {
@@ -20,6 +21,13 @@ class Home extends Component {
     }
 
     componentDidMount = () => {
+        if (this.state.page === "roots") {
+            axios.get("/api/roots/all").then((response) => {
+                this.setState({
+                    roots: response.data
+                });
+            });
+        }
     }
 
     route = (destination) => {
@@ -29,7 +37,7 @@ class Home extends Component {
     }
 
     render() {
-        let pages = ["Home", "Selling", "Harvesting", "Contact"];
+        let pages = ["Home", "Roots", "FAQ", "Contact"];
         
         let currentPage;
 
@@ -40,16 +48,16 @@ class Home extends Component {
             case "home":
                 currentPage = <About />;
                 break;
-            case "selling":
-                currentPage = <Selling routeFunction = {this.route}/>;
+            case "roots":
+                currentPage = <Plants routeFunction = {this.route} roots = {this.state.roots}/>;
                 break;
-            case "harvesting":
-                currentPage = <Harvesting />;
+            case "faq":
+                currentPage = <FAQ />;
                 break;
             case "contact":
                 currentPage = <Contact />;
                 break;
-            case "rootinformation":
+            case "root":
                 currentPage = <RootInfo rootInfo = {this.rootInfo}/>
                 break;
         }
@@ -67,13 +75,14 @@ class Home extends Component {
                     {pages.map(tab => {
                         if (tab === "Contact") {
                             return(
-                                <Link key = {"Home" + tab} to = {"/" + tab.toLowerCase()} id = "contact" onClick = {() => {this.route(tab.toLowerCase())}} className = "tab">
+                                <Link key = {"Home" + tab} to = {"/" + tab.toLowerCase()} id = "contact" className = {this.state.page === tab.toLowerCase() ? "tab active" : "tab"} onClick = {() => {this.route(tab.toLowerCase())}}>
                                     {tab}
                                 </Link>
                             )
                         }
                         return(
-                            <Link key = {"Home" + tab} to = {"/" + tab.toLowerCase()} className = "tab" onClick = {() => {this.route(tab.toLowerCase())}}>
+                            
+                            <Link key = {"Home" + tab} to = {"/" + tab.toLowerCase()} className = {this.state.page === tab.toLowerCase() ? "tab active" : "tab" } onClick = {() => {this.route(tab.toLowerCase())}}>
                                 {tab}
                             </Link>
                         )

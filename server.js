@@ -32,24 +32,43 @@ app.get("/api/roots/:id", function(req, res) {
 
     let image = path.join(__dirname, "/client/public/images/Roots/"+ req.params.id +"/image.jpg");
     let imageRelative = "/images/Roots/"+ req.params.id +"/image.jpg";
+    if (req.params.id !== "all") {
+        Roots.findOne({
+            rootId: req.params.id
+        }).then(function(dbRoot) {
+            console.log(dbRoot);
+            let info = {
+                name: dbRoot.name,
+                family: dbRoot.family,
+                altNames: dbRoot.altNames,
+                desc: dbRoot.desc.replace(/\n/g, "\n\n"),
+                harvesting: dbRoot.harvesting.replace(/\n/g, "\n\n"),
+                planting: dbRoot.planting.replace(/\n/g, "\n\n"),
+                references: dbRoot.references.replace(/\n/g, "\n\n"),
+                imageLink: imageRelative,
+            };
     
-    Roots.findOne({
-        rootId: req.params.id
-    }).then(function(dbRoot) {
-        console.log(dbRoot);
-        let info = {
-            name: dbRoot.name,
-            family: dbRoot.family,
-            altNames: dbRoot.altNames,
-            desc: dbRoot.desc.replace(/\n/g, "\n\n"),
-            harvesting: dbRoot.harvesting.replace(/\n/g, "\n\n"),
-            planting: dbRoot.planting.replace(/\n/g, "\n\n"),
-            imageLink: dbRoot.imageLink,
-        };
+            res.json(info);
+        }).catch((err) => {
+            console.log(err);
+            res.sendStatus(500);
+        });    
+    }
 
-
-        res.json(info);
-    }).catch(err => console.log(err));
+    else {
+        console.log("Searching for all Roots");
+        Roots.find({}).then(function(dbRoots) {
+            let roots = [];
+            dbRoots.forEach(root => {
+                roots.push({
+                    name: root.name,
+                    id: root.rootId
+                });
+            });
+            console.log(roots);
+            res.json(roots);
+        });
+    }
 });
 
 app.get("*", function(req, res) {

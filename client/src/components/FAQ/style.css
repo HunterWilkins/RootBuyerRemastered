@@ -1,0 +1,20 @@
+#faw p {
+    line-height: 1.5em;
+}
+
+ol {
+    list-style: inside decimal;
+}
+
+#faq h2, #faq h1 {
+    font-weight: bolder;
+}
+
+#faq .question {
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+#faq .answer {
+    margin-bottom: 2em;
+}

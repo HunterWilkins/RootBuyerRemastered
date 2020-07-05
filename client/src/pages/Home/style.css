@@ -20,10 +20,13 @@ main {
     min-height: 100%;
 }
 
+main, footer {
+    background: var(--mainBackground);
+}
+
 main, header, footer {
     margin: 15px auto;
-    width: 80%;
-    background: var(--mainBackground);
+    width: 85%;
 }
 
 hr {
@@ -40,19 +43,23 @@ header {
     align-items:center;
     height: 80px;
     padding: 15px;
-    background: inherit;
-    background: var(--mainBackground);
+    background: linear-gradient(to right, rgb(0,0,0,0),  rgb(41,36,32, .85) 20%, rgb(41,36,32, .85) 80% , rgb(0,0,0,0) 100%);
 }
 
 header h1, header p {
     padding: 5px 10px;
-    color: var(--brown);
+    color: var(--mainBackground);
     display: inline-block;
 }
 
 header h1 {
-    border-right: var(--darkbrown) solid 1px;
+    border-right: var(--mainBackground) solid 1px;
     margin-right: 5px;
+    font-size: 45px;
+}
+
+header p {
+    font-size: 26px;
 }
 
 nav {
@@ -60,9 +67,10 @@ nav {
     align-items:center;
     justify-content: center;
     background: var(--brown);
-    border-top: var(--darkbrown) solid 2px;
+    border-radius: 50px;
+    border: var(--darkbrown) solid 2px;
 
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     color: var(--mainBackground);
 }
@@ -72,12 +80,26 @@ nav {
     font-size: 20px;
     cursor: pointer;
     padding: 10px 0;
+    text-decoration: none;
     width: 20%;
     color: var(--mainBackground);
+    transition: transform .15s;
 }
 
-.tab:not(#contact) {
+.tab:not(.active):hover {
+    transform: scale(1.2);
+    color: white;
+}
+
+/* .tab:not(#contact) {
     border-right: var(--mainBackground) dotted 1px;
+} */
+
+.active {
+    font-weight: bolder;
+    text-decoration: none;
+    text-shadow: 0 3px 5px var(--darkbrown);
+    color: white;
 }
 
 footer {

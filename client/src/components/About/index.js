@@ -6,7 +6,7 @@ function About(props) {
     return(
         <div id = "about">
 
-            <h2>Home</h2>
+            <h2><strong>Home</strong></h2>
             <br></br>
             <p>
                 To ensure the presence of marketable botanicals for future generations, 

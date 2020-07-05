@@ -10,6 +10,14 @@
     font-family: sans-serif;
 }
 
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bolder;
+}
+
 p {
     font-size: 20px;
 }
