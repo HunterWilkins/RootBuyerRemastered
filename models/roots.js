@@ -45,6 +45,11 @@ let RootsSchema = new Schema ({
     references: {
         type: String
     },
+
+    demand: {
+        type: Number
+    },
+    
     imageLink: {
         type: String
     }

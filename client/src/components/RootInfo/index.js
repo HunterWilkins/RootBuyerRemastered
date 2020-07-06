@@ -9,19 +9,36 @@ class RootInfo extends Component {
 
     componentDidMount = () => {
         axios.get("/api/roots/" + window.location.pathname.split("/")[2]).then((response) => {
-            this.setState(response.data);
+            this.setState(response.data);   
         }).catch((err) => {
             console.log(err);
         });
     }
 
     render() {
+               
+        let demandPercent = (this.state.demand / 2) * 100 + "%";
+        let demandDictionary = ["Poor", "Normal", "Great"];
+ 
+        console.log(demandPercent);
         if (this.state.name) {
             return (
                 <div id = "rootinfo">
                     <article>
                         <h1><strong>{this.state.name}</strong></h1>
                         <h3><em>{this.state.family}</em></h3>
+                        <p>Demand: {demandDictionary[this.state.demand]}</p>
+
+                        {
+                            this.state.demand ?                            
+                            <div className = "demand-slider" style = {{
+                                background: `linear-gradient(to right, var(--brown) 0%, var(--brown) ${demandPercent}, var(--mainBackgroundDark) ${demandPercent}, var(--mainBackgroundDark) 100%)`
+                            }}>
+                                
+                            </div>
+                            :
+                            null
+                            }
                         <hr className = "brown-hr"/>
                         <p>{this.state.desc}</p>
                         <br></br> <br></br>

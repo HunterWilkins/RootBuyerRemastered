@@ -45,6 +45,7 @@ app.get("/api/roots/:id", function(req, res) {
                 harvesting: dbRoot.harvesting.replace(/\n/g, "\n\n"),
                 planting: dbRoot.planting.replace(/\n/g, "\n\n"),
                 references: dbRoot.references.replace(/\n/g, "\n\n"),
+                demand: dbRoot.demand,
                 imageLink: imageRelative,
             };
     
