@@ -1,9 +1,11 @@
 # RootBuyerRemastered 
 RootBuyerRemastered is an attempt to "Remaster" the original RootBuyer.com. It cleans up the design of the site while still staying true to its original color scheme and layout.
 
-![RootBuyerRemastered Screenshot](https://raw.githubusercontent.com/HunterWilkins/RootBuyerRemastered/master/client/public/Screenshot.jpg)
-
+Original
 ![RootBuyerOriginalSiteScreenshot](https://raw.githubusercontent.com/HunterWilkins/RootBuyerRemastered/master/client/public/Screenshot(Original).jpg)
+
+Remastered
+![RootBuyerRemastered Screenshot](https://raw.githubusercontent.com/HunterWilkins/RootBuyerRemastered/master/client/public/Screenshot.jpg)
 
 # Current Features
 + Database, with current model:
