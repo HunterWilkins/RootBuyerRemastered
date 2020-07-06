@@ -25,7 +25,6 @@ RootBuyerRemastered is an attempt to "Remaster" the original RootBuyer.com. It c
 + Simple, Efficient Layout (inspired by Handlebars.js)
 + Re-Design of "Harvesting Information" into FAQ
 + Added Demand Bar to Plant Info Pages (0-2, Poor-Great) 
-- "Contact Us" Page is PURELY Aesthetic and has no Functionality
 + Wonderful Ginseng Logo, hand-painted by Hunter Wilkins, Based on RootBuyer.com's Most Popular Root
 
-### Note: All text is from the parent website, with only a few edits for marketing. Any possible errors are the responsibility of RootBuyer.com. This site is a mockup, and is not intended as a functional substitute for RootBuyer.com.
+### Note: All text is from the parent website, with only a few edits for marketing. Any possible errors are the responsibility of RootBuyer.com. This site is a mockup, and is not intended as a functional substitute for RootBuyer.com. Additionally, the "Contact Us" Page is purely aesthetic: it is non-functional.
