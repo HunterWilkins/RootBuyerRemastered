@@ -11,7 +11,6 @@ function Selling(props) {
             <br />
             <h2>Drying</h2>
             {/* <p>Properly cared for, cleaned and dried items can often bring higher prices!</p> */}
-            <p>(ex. )</p>
             <ul>
                 <li>Dry your herbs and leaves in the shade to keep their green color.</li>
                 <li>By spreading out your botanicals in a thin layer allowing air flow will help prevent mold. Once dry do no allow your botanicals to get wet again.</li>
