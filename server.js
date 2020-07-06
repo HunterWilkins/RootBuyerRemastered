@@ -30,8 +30,8 @@ if (process.env.NODE_ENV === "production") {
 app.get("/api/roots/:id", function(req, res) {
     console.log("HITTING API ROUTE: " + req.params.id);
 
-    let image = path.join(__dirname, "/client/public/images/Roots/"+ req.params.id +"/image.jpg");
-    let imageRelative = "/images/Roots/"+ req.params.id +"/image.jpg";
+    let image = path.join(__dirname, "/client/public/Images/Roots/"+ req.params.id +"/image.jpg");
+    let imageRelative = "/Images/Roots/"+ req.params.id +"/image.jpg";
     if (req.params.id !== "all") {
         Roots.findOne({
             rootId: req.params.id
