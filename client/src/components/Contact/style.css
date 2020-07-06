@@ -30,6 +30,7 @@ form input, form textarea {
 
 form textarea {
     height: 10em;
+    resize: vertical;
 }
 
 form button {
