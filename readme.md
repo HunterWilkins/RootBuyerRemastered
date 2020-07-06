@@ -4,16 +4,16 @@ RootBuyerRemastered is an attempt to "Remaster" the original RootBuyer.com. It c
 
 # Current Features
 + Database, with current model:
-..* rootId
-..* name
-..* altNames (common alternative names for the root)
-..* desc (a description of the root)
-..* price (market price)
-..* family
-..* harvesting (harvesting info)
-..* partsUsed
-..* planting (planting info)
-..* references (cited sources for information)
+.... rootId
+.... name
+.... altNames (common alternative names for the root)
+.... desc (a description of the root)
+.... price (market price)
+.... family
+.... harvesting (harvesting info)
+.... partsUsed
+.... planting (planting info)
+.... references (cited sources for information)
 
 + GET Route for Root Information
 + Fast Loading (React.js)
