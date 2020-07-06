@@ -16,5 +16,6 @@ ol {
 }
 
 #faq .answer {
+    padding-left: 15px;
     margin-bottom: 2em;
 }
