@@ -8,7 +8,7 @@ import Home from "../../pages/Home/index.js";
 function Plants(props) {
 
     return(
-        <div id = "selling">
+        <div id = "plants">
 
             <h2><strong>What We Buy</strong></h2>
             <br></br>

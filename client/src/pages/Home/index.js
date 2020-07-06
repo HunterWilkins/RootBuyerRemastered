@@ -6,6 +6,8 @@ import FAQ from "../../components/FAQ/index.js";
 import Plants from "../../components/Plants/index.js";
 import Contact from "../../components/Contact/index.js";
 import RootInfo from "../../components/RootInfo/index.js";
+import Selling from "../../components/Selling/index.js";
+
 import axios from "axios";
 
 class Home extends Component {
@@ -35,7 +37,7 @@ class Home extends Component {
     }
 
     render() {
-        let pages = ["Home", "Roots", "FAQ", "Contact"];
+        let pages = ["Home", "Roots", "Selling", "FAQ", "Contact"];
         
         let currentPage;
 
@@ -54,6 +56,10 @@ class Home extends Component {
                 break;
             case "contact":
                 currentPage = <Contact />;
+                break;
+
+            case "selling": 
+                currentPage = <Selling />;
                 break;
             case "root":
                 currentPage = <RootInfo rootInfo = {this.rootInfo}/>

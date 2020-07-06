@@ -1,0 +1,25 @@
+#selling h1, #selling h2 {
+    line-height: 2em;
+}
+
+#selling p {
+    line-height: 1.5em;
+}
+
+ol {
+    list-style: inside decimal;
+}
+
+#selling ul {
+    font-size: 20px;
+    list-style: circle;
+    padding-left: 50px;
+}
+
+#selling ul li {
+    margin-bottom: 15px;
+}
+
+#selling h2, #selling h1 {
+    font-weight: bolder;
+}
