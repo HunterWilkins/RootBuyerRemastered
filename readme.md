@@ -1,4 +1,5 @@
-RootBuyerRemastered is an attempt to "Remaster" the original RootBuyer.com. It cleans up the design of the site while still maintaining its original color scheme and general layout.
+# RootBuyerRemastered 
+RootBuyerRemastered is an attempt to "Remaster" the original RootBuyer.com. It cleans up the design of the site while still staying true to its original color scheme and layout.
 
 ![RootBuyerRemastered Screenshot](https://raw.githubusercontent.com/HunterWilkins/RootBuyerRemastered/master/client/public/Screenshot.jpg)
 
@@ -22,3 +23,4 @@ RootBuyerRemastered is an attempt to "Remaster" the original RootBuyer.com. It c
 - "Contact Us" Page is PURELY Aesthetic and has no Functionality
 + Wonderful Ginseng Logo, hand-painted by Hunter Wilkins, Based on RootBuyer.com's Most Popular Root
 
+### Note: All text is from the parent website, with only a few edits for marketing. Any possible misspellings or errors in information are the responsibility of RootBuyer.com
