@@ -46,16 +46,22 @@ header {
     background: linear-gradient(to right, rgb(0,0,0,0),  rgb(41,36,32, .85) 20%, rgb(41,36,32, .85) 80% , rgb(0,0,0,0) 100%);
 }
 
-header h1, header p {
+header > * {
     padding: 5px 10px;
     color: var(--mainBackground);
-    display: inline-block;
+    display: flex;
+    align-items:center;
 }
 
-header h1 {
+#logo {
     border-right: var(--mainBackground) solid 1px;
     margin-right: 5px;
     font-size: 45px;
+}
+
+#logo img {
+    border: none;
+    width: 60px;
 }
 
 header p {

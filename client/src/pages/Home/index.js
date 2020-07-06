@@ -21,13 +21,11 @@ class Home extends Component {
     }
 
     componentDidMount = () => {
-        if (this.state.page === "roots") {
-            axios.get("/api/roots/all").then((response) => {
-                this.setState({
-                    roots: response.data
-                });
+        axios.get("/api/roots/all").then((response) => {
+            this.setState({
+                roots: response.data
             });
-        }
+        });
     }
 
     route = (destination) => {
@@ -65,7 +63,10 @@ class Home extends Component {
         return (
             <div id = "content">
                 <header>
-                    <h1>Root Buyer</h1>
+                    <div id = "logo">
+                        <img src = "/Logo.png" />
+                        <h1>Root Buyer</h1>
+                    </div>
                     <p>Buying Roots and Herbs for over 40 Years</p>
                 </header>
 
