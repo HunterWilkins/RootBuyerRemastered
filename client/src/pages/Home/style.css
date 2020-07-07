@@ -3,6 +3,7 @@ body {
     background-size: 100%;
     background-attachment: fixed;
     -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
 }
 
 #content {
