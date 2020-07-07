@@ -18,6 +18,7 @@ main {
     border-radius: 15px;
     color: var(--brown);
     min-height: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 main, footer {

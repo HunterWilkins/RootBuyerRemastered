@@ -42,5 +42,19 @@ form button {
     border: none;
     padding: 5px;
     width: 100%;
+}
 
+@media only screen and (max-width: 700px) {
+    #contact section, #contact form {
+        position: relative;
+        transform: none;
+        left: initial;
+        top: initial;
+        display: block;
+        width: 100%;
+    }
+
+    #contact section {
+        margin-bottom: 2em;
+    }
 }

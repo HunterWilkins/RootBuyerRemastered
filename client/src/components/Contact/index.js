@@ -15,6 +15,8 @@ function Contact(props) {
                     <li>Fax: 812-824-1467</li>
                 </ul>
             </section>
+
+            
             
             <form>
                 <input type = "text" placeholder = "Your Name (required)"></input>
