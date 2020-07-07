@@ -22,7 +22,7 @@ RootBuyerRemastered is an attempt to "Remaster" the original RootBuyer.com. It c
 
 + GET Route for Root Information
 + Fast Loading (React.js)
-+ Simple, Efficient Layout (inspired by Handlebars.js)
++ Simple, Efficient, Fully Mobile-Responsive Layout (inspired by Handlebars.js)
 + Re-Design of "Harvesting Information" into FAQ
 + Added Demand Bar to Plant Info Pages (0-2, Poor-Great) 
 + Wonderful Ginseng Logo, hand-painted by Hunter Wilkins, Based on RootBuyer.com's Most Popular Root
