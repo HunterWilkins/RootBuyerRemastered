@@ -46,7 +46,7 @@ class RootInfo extends Component {
                         <br></br>
                         <p>{this.state.harvesting}</p>
                     </article>
-
+                    {/* <br /><br /> */}
                     <aside>
                         <figure>
                             <img src = {this.state.imageLink} alt = {this.state.name}/>

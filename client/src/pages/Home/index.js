@@ -82,7 +82,15 @@ class Home extends Component {
                     {pages.map(tab => {
                         if (tab === "Contact") {
                             return(
-                                <Link key = {"Home" + tab} to = {"/" + tab.toLowerCase()} id = "contact" className = {this.state.page === tab.toLowerCase() ? "tab active" : "tab"} onClick = {() => {this.route(tab.toLowerCase())}}>
+                                <Link key = {"Home" + tab} to = {"/" + tab.toLowerCase()} id = "contact" className = {this.state.page === tab.toLowerCase() ? "tab active bottom-tabs" : "tab bottom-tabs"} onClick = {() => {this.route(tab.toLowerCase())}}>
+                                    {tab}
+                                </Link>
+                            )
+                        }
+
+                        else if (tab === "FAQ") {
+                            return(
+                                <Link key = {"Home" + tab} to = {"/" + tab.toLowerCase()} id = "faq-tab" className = {this.state.page === tab.toLowerCase() ? "tab active bottom-tabs" : "tab bottom-tabs"} onClick = {() => {this.route(tab.toLowerCase())}}>
                                     {tab}
                                 </Link>
                             )
