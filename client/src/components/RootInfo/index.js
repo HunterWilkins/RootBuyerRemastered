@@ -16,10 +16,33 @@ class RootInfo extends Component {
     }
 
     render() {
-               
-        let demandPercent = (this.state.demand / 2) * 100 + "%";
+        let demandPercent;
+        let sliderStyle;
+
+        switch(this.state.demand) {
+            case 1:
+                demandPercent = "25%";
+                sliderStyle = {
+                    background: `linear-gradient(to right, red 0%, red ${demandPercent}, var(--mainBackgroundDark) ${demandPercent}, var(--mainBackgroundDark) 100%)`            
+                }
+                break;
+            case 2:
+                demandPercent = "50%";
+                sliderStyle = {
+                    background: `linear-gradient(to right, green 0%, green ${demandPercent}, var(--mainBackgroundDark) ${demandPercent}, var(--mainBackgroundDark) 100%)`            
+                }
+                break;
+            case 3: 
+                demandPercent = "100%";
+                
+                sliderStyle = {
+                    background: `linear-gradient(to right, green 0%, green ${demandPercent}, var(--mainBackgroundDark) ${demandPercent}, var(--mainBackgroundDark) 100%)`            
+                }
+                break;
+        }
+        // let demandPercent = this.state.demand !== 2 ? (this.state.demand / 3) * 100 + "%" : "50%";
         let demandDictionary = ["Poor", "Normal", "Great"];
- 
+
         console.log(demandPercent);
         if (this.state.name) {
             return (
@@ -27,13 +50,11 @@ class RootInfo extends Component {
                     <article>
                         <h1><strong>{this.state.name}</strong></h1>
                         <h3><em>{this.state.family}</em></h3>
-                        <p>Demand: {demandDictionary[this.state.demand]}</p>
+                        <p>Demand: {demandDictionary[(this.state.demand-1)]}</p>
 
                         {
                             this.state.demand ?                            
-                            <div className = "demand-slider" style = {{
-                                background: `linear-gradient(to right, var(--brown) 0%, var(--brown) ${demandPercent}, var(--mainBackgroundDark) ${demandPercent}, var(--mainBackgroundDark) 100%)`
-                            }}>
+                            <div className = "demand-slider" style = {sliderStyle}>
                                 
                             </div>
                             :
