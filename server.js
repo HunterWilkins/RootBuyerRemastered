@@ -4,6 +4,7 @@ const fs = require("fs");
 const app = express();
 
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/rootbuyer";
+console.log(MONGODB_URI);
 const mongoose = require("mongoose");
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connection.on("connected", function() {
