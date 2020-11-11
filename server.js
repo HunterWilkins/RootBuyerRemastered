@@ -59,6 +59,7 @@ app.get("/api/roots/:id", function(req, res) {
     else {
         console.log("Searching for all Roots");
         Roots.find({}).then(function(dbRoots) {
+            console.log(dbRoots);
             let roots = [];
             dbRoots.forEach(root => {
                 roots.push({
@@ -68,7 +69,7 @@ app.get("/api/roots/:id", function(req, res) {
             });
             console.log(roots);
             res.json(roots);
-        });
+        }).catch(err => res.json(err));
     }
 });
 
